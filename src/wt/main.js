@@ -12,7 +12,7 @@ const performCalculations = async () => {
         worker.postMessage(10 + i);
 
         worker.on("message", (message) => {
-          resolve(message.data);
+          resolve(message);
         });
 
         worker.on("error", reject);
